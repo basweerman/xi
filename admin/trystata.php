@@ -1,0 +1,24 @@
+<?php
+
+/* 
+------------------------------------------------------------------------
+Copyright (C) 2015 Albert Weerman
+This library/program is free software; you can redistribute it and/or modify it under the terms of the GNU Lesser General Public License as published by the Free Software Foundation; either version 2.1 of the License, or (at your option) any later version.
+This library is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more details.
+You should have received a copy of the GNU Lesser General Public License along with this library; if not, write to the Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+------------------------------------------------------------------------
+*/
+
+if (function_exists('stata_write')){
+    echo 'hoooooray';
+$data = array ( 1 => array ( 'primkey' => '5631989408cbd', 'language' => '1', 'browserinfo' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36', 'startts' => '2015-10-28 20:55:00', 'endts' => '2015-10-28 20:55:09', 'q_intro' => '1', 'q1_1_' => 8.9884656743115795E+307, 'q1_2_' => 8.9884656743115795E+307, 'PA1_1_' => 8.9884656743115795E+307, 'PA1_2_' => 8.9884656743115795E+307, 'PA2' => '.', 'bastest' => '.', 'a1' => '.', 'b1' => '.', 'teststring' => 'bas test', 'a12' => '.', 'married' => 1, 'qi' => 4, 'q2_3_' => 8.9884656743115795E+307, 'q2_4_' => 8.9884656743115795E+307, 'q2_5_' => 8.9884656743115795E+307), 2 => array ( 'primkey' => '5631989fa8c5b', 'language' => '1', 'browserinfo' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36', 'startts' => '2015-10-28 20:55:11', 'endts' => '2015-10-28 20:55:21', 'q_intro' => '1', 'q1_1_' => 8.9884656743115795E+307, 'q1_2_' => 8.9884656743115795E+307, 'PA1_1_' => 8.9884656743115795E+307, 'PA1_2_' => 8.9884656743115795E+307, 'PA2' => '.', 'bastest' => '.', 'a1' => '.', 'b1' => '.', 'teststring' => 'test 2', 'a12' => '.', 'married' => 12, 'qi' => 4, 'q2_3_' => 8.9884656743115795E+307, 'q2_4_' => 8.9884656743115795E+307, 'q2_5_' => 8.9884656743115795E+307 ) );
+$variables = array ( 'primkey' => array ( 'vlabels' => '', 'dlabels' => 'test string', 'vfmt' => '%240s', 'valueType' => '240'), 'language' => array ( 'vlabels' => '', 'dlabels' => 'survey language', 'vfmt' => '%240s', 'valueType' => '240'), 'browserinfo' => array ( 'vlabels' => '', 'dlabels' => 'browser information', 'vfmt' => '%240s', 'valueType' => '240'), 'startts' => array ( 'vlabels' => '', 'dlabels' => 'survey start timestamp', 'vfmt' => '%240s', 'valueType' => '240'), 'endts' => array ( 'vlabels' => '', 'dlabels' => 'survey end timestamp', 'vfmt' => '%240s', 'valueType' => '240'), 'q_intro' => array ( 'vlabels' => '', 'dlabels' => 'description intro', 'vfmt' => '%1s', 'valueType' => '1'), 'q1_1_' => array ( 'vlabels' => '', 'dlabels' => 'description1', 'vfmt' => '%9.0g', 'valueType' => '255'), 'q1_2_' => array ( 'vlabels' => '', 'dlabels' => 'description1', 'vfmt' => '%9.0g', 'valueType' => '255'), 'PA1_1_' => array ( 'vlabels' => '', 'dlabels' => 'description1', 'vfmt' => '%9.0g', 'valueType' => '255'), 'PA1_2_' => array ( 'vlabels' => '', 'dlabels' => 'description1', 'vfmt' => '%9.0g', 'valueType' => '255'), 'PA2' => array ( 'vlabels' => '', 'dlabels' => 'dasd', 'vfmt' => '%1s', 'valueType' => '1'), 'bastest' => array ( 'vlabels' => '', 'dlabels' => '', 'vfmt' => '%240s', 'valueType' => '240'), 'a1' => array ( 'vlabels' => '', 'dlabels' => '', 'vfmt' => '%1s', 'valueType' => '1'), 'b1' => array ( 'vlabels' => '', 'dlabels' => 'description yes', 'vfmt' => '%1s', 'valueType' => '1'), 'teststring' => array ( 'vlabels' => '', 'dlabels' => 'test string question', 'vfmt' => '%240s', 'valueType' => '240'), 'a12' => array ( 'vlabels' => '', 'dlabels' => '', 'vfmt' => '%1s', 'valueType' => '1'), 'married' => array ( 'vlabels' => '', 'dlabels' => 'R married', 'vfmt' => '%9.0g', 'valueType' => '255'), 'qi' => array ( 'vlabels' => '', 'dlabels' => 'temp var', 'vfmt' => '%9.0g', 'valueType' => '255'), 'q2_3_' => array ( 'vlabels' => 'TYesNo', 'dlabels' => 'description2', 'vfmt' => '%9.0g', 'valueType' => '255'), 'q2_4_' => array ( 'vlabels' => 'TYesNo', 'dlabels' => 'description2', 'vfmt' => '%9.0g', 'valueType' => '255'), 'q2_5_' => array ( 'vlabels' => 'TYesNo', 'dlabels' => 'description2', 'vfmt' => '%9.0g', 'valueType' => '255') );
+$labels = array ( 'TYesNo' => array ( 1 => '1 Yes', 2 => '2 Ja', 12 => '12 test' ) );
+
+stata_write('/tmp/aa_' . date('ymdhis') . '.dta', array('data' => $data), $variables, array('labels' => $labels));
+}
+else {
+    echo ' stata_write not found';
+}
+
+?>

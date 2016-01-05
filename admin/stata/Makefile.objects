@@ -1,0 +1,12 @@
+stata.lo: /var/www/html/xi/admin/stata/stata.c
+	$(LIBTOOL) --mode=compile $(CC)  -I. -I/var/www/html/xi/admin/stata $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /var/www/html/xi/admin/stata/stata.c -o stata.lo 
+stataread.lo: /var/www/html/xi/admin/stata/stataread.c
+	$(LIBTOOL) --mode=compile $(CC)  -I. -I/var/www/html/xi/admin/stata $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /var/www/html/xi/admin/stata/stataread.c -o stataread.lo 
+statawrite.lo: /var/www/html/xi/admin/stata/statawrite.c
+	$(LIBTOOL) --mode=compile $(CC)  -I. -I/var/www/html/xi/admin/stata $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)  -c /var/www/html/xi/admin/stata/statawrite.c -o statawrite.lo 
+$(phplibdir)/stata.la: ./stata.la
+	$(LIBTOOL) --mode=install cp ./stata.la $(phplibdir)
+
+./stata.la: $(shared_objects_stata) $(STATA_SHARED_DEPENDENCIES)
+	$(LIBTOOL) --mode=link $(CC) $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) $(LDFLAGS) -o $@ -export-dynamic -avoid-version -prefer-pic -module -rpath $(phplibdir) $(EXTRA_LDFLAGS) $(shared_objects_stata) $(STATA_SHARED_LIBADD)
+
